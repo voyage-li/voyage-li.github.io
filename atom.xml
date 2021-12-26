@@ -6,7 +6,7 @@
   <link href="https://voyage-li.github.io/atom.xml" rel="self"/>
   
   <link href="https://voyage-li.github.io/"/>
-  <updated>2021-12-26T09:20:40.943Z</updated>
+  <updated>2021-12-26T09:53:41.773Z</updated>
   <id>https://voyage-li.github.io/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>建站经历</title>
+    <link href="https://voyage-li.github.io/2021/12/26/%E5%BB%BA%E7%AB%99%E7%BB%8F%E5%8E%86/"/>
+    <id>https://voyage-li.github.io/2021/12/26/%E5%BB%BA%E7%AB%99%E7%BB%8F%E5%8E%86/</id>
+    <published>2021-12-26T09:52:53.000Z</published>
+    <updated>2021-12-26T09:53:41.773Z</updated>
+    
+    
+    
+    
+    <category term="experience" scheme="https://voyage-li.github.io/categories/experience/"/>
+    
+    
+    <category term="hexo" scheme="https://voyage-li.github.io/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
