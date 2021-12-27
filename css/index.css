@@ -1325,6 +1325,10 @@ kbd {
   margin: 0.5rem 0 0;
   font-weight: 600;
 }
+.sidebar-ov-author__notice {
+  margin: 0.5rem 0 0;
+  font-weight: 600;
+}
 .sidebar-ov-social {
   padding: 0.5rem 0;
   text-align: center;

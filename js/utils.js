@@ -550,20 +550,20 @@ Stun.utils = Stun.$u = {
     })
   },
   addCopyButton: function (type) {
-    var btnContainer = '.post-copyright,'
-    var $copyIcon = $(
-      `<div class="copy-button" data-popover="${CONFIG.prompt.copyButton}" data-popover-pos="up">` +
-        `<i class="${CONFIG.fontIcon.copyBtn}"></i>` +
-        '</div>'
-    )
+        var btnContainer = '.post-copyright,'
+        var $copyIcon = $(
+        `<div class="copy-button" data-popover="${CONFIG.prompt.copyButton}" data-popover-pos="up">` +
+            `<i class="${CONFIG.fontIcon.copyBtn}"></i>` +
+            '</div>'
+        )
 
-    if (type === 'simple' || type === 'carbon') {
-      btnContainer += '.highlight figcaption:not(".custom")'
-    } else {
-      btnContainer += '.highlight figcaption'
-    }
-    // Add a copy button to the selected elements.
-    $(btnContainer).append($copyIcon)
+        if (type === 'simple') {
+        btnContainer += '.highlight figcaption:not(".custom")'
+        } else {
+        btnContainer += '.highlight figcaption'
+        }
+        // Add a copy button to the selected elements.
+        $(btnContainer).append($copyIcon)
   },
   registerCopyEvent: function () {
     $('.copy-button').on('click', function () {
