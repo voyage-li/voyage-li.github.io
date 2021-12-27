@@ -1858,12 +1858,6 @@ kbd {
 .post-meta-item--wordcount {
   color: var(--color-gray-700);
 }
-.post-meta-item--readtime {
-  color: #49b1f5;
-}
-.post-meta-item--visitors {
-  color: #fc6423;
-}
 .post-ending {
   margin-bottom: 1rem;
 }
@@ -3110,13 +3104,6 @@ div.vheader.item2 {
   width: 25% !important;
   margin: 0px !important;
 }
-.v .vwrap {
-  border: 2px solid #000 !important;
-  height: 200x !important;
-  border-radius: 6px !important;
-  overflow: visible !important;
-  counter-reset: avater;
-}
 .v .vwrap .vedit .vemojis {
   width: 600px !important;
   background-color: #fff !important;
@@ -3126,6 +3113,13 @@ div.vheader.item2 {
   width: 600px !important;
   background-color: #fff !important;
   border-radius: 5px !important;
+}
+.v .vwrap {
+  border: 2px solid #000 !important;
+  height: 200x !important;
+  border-radius: 6px !important;
+  overflow: visible !important;
+  counter-reset: avater;
 }
 .v .vbtn {
   background-color: #971212 !important;
