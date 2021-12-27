@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>https://voyage-li.github.io/message/index.html</loc>
+    
+    <lastmod>2021-12-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://voyage-li.github.io/categories/index.html</loc>
     
     <lastmod>2021-12-26</lastmod>
@@ -21,15 +30,6 @@
   
   <url>
     <loc>https://voyage-li.github.io/tags/index.html</loc>
-    
-    <lastmod>2021-12-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://voyage-li.github.io/message/index.html</loc>
     
     <lastmod>2021-12-26</lastmod>
     
@@ -74,6 +74,13 @@
 
   
   <url>
+    <loc>https://voyage-li.github.io/tags/mcfunction/</loc>
+    <lastmod>2021-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://voyage-li.github.io/tags/markdown/</loc>
     <lastmod>2021-12-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -94,24 +101,17 @@
     <priority>0.2</priority>
   </url>
   
-  <url>
-    <loc>https://voyage-li.github.io/tags/mcfunction/</loc>
-    <lastmod>2021-12-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
 
   
   <url>
-    <loc>https://voyage-li.github.io/categories/%E6%B5%8B%E8%AF%95/</loc>
+    <loc>https://voyage-li.github.io/categories/%E6%B8%B8%E6%88%8F/</loc>
     <lastmod>2021-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://voyage-li.github.io/categories/%E6%B8%B8%E6%88%8F/</loc>
+    <loc>https://voyage-li.github.io/categories/%E6%B5%8B%E8%AF%95/</loc>
     <lastmod>2021-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

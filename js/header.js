@@ -100,7 +100,7 @@ $(document).ready(function () {
         $nightMode.toggleClass('mode--checked')
         $nightMode.addClass('mode--focus')
         $('html').toggleClass('nightmode')
-        $("body").toggleClass("night");
+        // $("body").toggleClass("night");
       })
     }
 
