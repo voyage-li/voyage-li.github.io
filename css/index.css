@@ -2342,11 +2342,11 @@ kbd {
   -o-transition: color 0.2s ease;
   -ms-transition: color 0.2s ease;
   transition: color 0.2s ease;
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 .back2top__icon:hover {
   color: #fc6423;
@@ -2504,9 +2504,6 @@ a.fancybox {
   border: 0;
   width: 0;
   height: 0;
-}
-.post-share {
-  margin: 0 0 1rem;
 }
 .reward {
   text-align: center;
