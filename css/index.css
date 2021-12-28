@@ -2512,9 +2512,6 @@ a.fancybox {
   width: 0;
   height: 0;
 }
-.post-share {
-  margin: 0 0 1rem;
-}
 .reward {
   text-align: center;
 }
@@ -2591,19 +2588,6 @@ a.fancybox {
 }
 .gallery img {
   margin-bottom: 10px;
-}
-.exturl__icon {
-  margin: 0 0.1em 0 0.3em;
-  font-size: 0.8em;
-  color: #aaa;
-}
-.exturl__link {
-  white-space: normal;
-  word-wrap: break-word;
-  word-break: break-word;
-}
-.footer .exturl__icon {
-  color: #fff;
 }
 .comments {
   margin: 1.5rem 0 0;
@@ -3137,6 +3121,129 @@ div#comments.comments.v {
   counter-reset: avater;
 }
 .v .vbtn {
-  background-color: #971212 !important;
+  background-color: --color-gray-250 !important;
+  color: --color-gray-800 !important;
+}
+.v .vwrap .vedit .vctrl {
+  text-align: left !important;
+}
+div.vcontrol {
+  margin-top: 30px;
+}
+.v .veditor {
+  min-height: 70px !important;
+  height: 100px !important;
+}
+.v .vlist .vcard {
+  border: 1px solid #ccc !important;
+  padding-left: 14px !important;
+  padding-right: 14px !important;
+  margin-bottom: 20px !important;
+  border-radius: 10px !important;
+}
+.v .vlist .vquote .vcard {
+  border: 0px !important;
+  margin-bottom: 0px !important;
+  border-radius: 0px !important;
+  padding: 0px !important;
+}
+.v .vlist .vcard .vhead .vsys {
+  display: none !important;
+  background-color: #fff !important;
+}
+.v .vlist .vcard .vh .vmeta .vat {
+  background-color: #177714 !important;
   color: #fff !important;
+  border-radius: 3px !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+.v .vlist .vcard .vimg {
+  margin: 0 12px 0 0;
+  counter-increment: avater;
+}
+.v .vlist .vcard .vimg:hover {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -transform: rotate(360deg);
+}
+.v .vlist .vcard .vquote {
+  margin-left: 40px;
+}
+.v .vlist .vcard .vquote {
+  counter-reset: avaters;
+}
+.v .vlist .vcard .vquote .vimg {
+  display: avaters !important;
+}
+.v .vlist .vcard .vquote .vhead:before {
+  display: block;
+  float: left;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  margin: 0 12px 0 0;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  font-style: normal;
+  background-color: #2d4e41;
+  border: 3px solid #60a1e5;
+  border-radius: 50%;
+  text-align: center;
+/*content: counter(avater)'.'counter(avaters);
+    counter-increment: avaters;*/
+}
+.v .vlist .vcard p {
+  top: -1.5em;
+  position: relative;
+  z-index: 1;
+  margin: unset;
+}
+.v .vlist .vcard .vquote a.at {
+  font-size: 13px;
+  color: #bea124;
+  text-decoration: none;
+  border: unset;
+  position: relative;
+  top: -40px;
+}
+.v .vlist .vcard .vquote .vcontent {
+  font-size: 15px;
+  font-weight: 200;
+}
+.v .vlist .vcard .vcontent {
+  margin-top: 58px !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  padding-top: 0 !important;
+  margin-bottom: unset !important;
+}
+.v .vlist .vcard .vquote .vhead .vnick {
+  color: #5af !important;
+  font-weight: 300 !important;
+  font-size: 15px !important;
+}
+.v .vlist .vcard .vhead .vnick {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  color: #5b6b68 !important;
+}
+.v .vlist .vcard {
+  padding-top: 8px !important;
+}
+.v .vlist .vcard .vhead {
+  float: left !important;
+}
+.v .vlist .vcard .vh .vmeta {
+  float: right !important;
+}
+.v .vlist .vcard .vcontent.expand:after {
+  content: "点击查看全部" !important;
+  font-weight: 400 !important;
+}
+.markdown,
+.vlink {
+  display: none !important;
 }
