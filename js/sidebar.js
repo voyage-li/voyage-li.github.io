@@ -116,6 +116,7 @@ $(document).ready(function () {
         } else {
             $sidebar.removeClass('sidebar--sticky')
         }
+
     }
 
     // Update the reading progress lines of post.
