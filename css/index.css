@@ -313,6 +313,7 @@ template {
   --color-gray-850: #303846;
   --color-gray-900: #2c323c;
   --color-gray-950: #1c1e21;
+  --color-notice: #f90;
   --color-font: var(--color-gray-900);
   --color-card: var(--color-gray-100);
   --color-blue-200: #ebeef5;
@@ -334,6 +335,7 @@ html.nightmode {
   --color-gray-850: #f5f6f7;
   --color-gray-900: #f9f9f9;
   --color-gray-950: #fff;
+  --color-notice: #f90;
   --color-font: var(--color-gray-600);
   --color-card: var(--color-gray-150);
   --color-blue-200: #444950;
@@ -1087,9 +1089,25 @@ kbd {
 .notice {
   margin-top: 30px;
   border-radius: 5px;
-  font-weight: bold;
   background-color: var(--color-card);
-  padding: 10px 10px 10px 10px;
+  padding: 10px 20px 20px 20px;
+  width: 300px;
+}
+.notice_banner {
+  font-weight: 500;
+  color: var(--color-notice);
+  font-size: 20px;
+}
+.notice_text {
+  margin: 0px 10px 0px 10px;
+  width: 300px;
+  font-size: 16px;
+}
+.sidebar_basic {
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  background-color: var(--color-card);
+  padding: 1rem;
   width: 300px;
   font-size: 16px;
 }
@@ -1111,11 +1129,7 @@ kbd {
   float: right;
 }
 .sidebar-nav {
-  border-radius: 5px 5px 0px 0px;
-  background-color: var(--color-card);
-  padding: 5px 10px 5px 10px;
-  width: 300px;
-  font-size: 16px;
+  padding-bottom: 1em;
   text-align: center;
 }
 .sidebar-nav-toc,
@@ -1142,10 +1156,6 @@ kbd {
   overflow: auto;
   position: relative;
   max-height: 70vh;
-  background-color: var(--color-card);
-  padding: 5px 10px 5px 10px;
-  width: 300px;
-  font-size: 16px;
   white-space: normal;
   word-wrap: break-word;
   word-break: break-word;
@@ -1166,20 +1176,6 @@ kbd {
 .sidebar-toc ol {
   margin: 0;
   padding-left: 1em;
-}
-.sidebar-ov {
-  background-color: var(--color-card);
-  padding: 10px;
-  border-radius: 5px;
-  width: 300px;
-  font-size: 16px;
-}
-.sidebar-ov.hide {
-  background-color: var(--color-card);
-  padding: 5px 10px 5px 10px;
-  border-radius: 0px 0px 0px 0px;
-  width: 300px;
-  font-size: 16px;
 }
 .sidebar-ov-author {
   width: 100%;
@@ -1425,11 +1421,8 @@ kbd {
 }
 .sidebar-reading {
   overflow: hidden;
+  margin-top: 0.5em;
   text-align: center;
-  border-radius: 0px 0px 5px 5px;
-  background-color: var(--color-card);
-  padding: 0px 10px 15px 10px;
-  font-size: 16px;
 }
 .sidebar-reading-info {
   margin-bottom: 0.3em;
