@@ -207,27 +207,6 @@ Stun.utils = Stun.$u = {
     }
     return init(function () {})
   },
-  showThemeInConsole: function () {
-    var stunInfo = '主题不错？⭐star 支持一下 ->'
-    var stunURL = 'https://github.com/liuyib/hexo-theme-stun'
-    var stunNameStr =
-      '\n\n      ___          ___            ___            ___      \n     /\\  \\        /\\  \\          /\\__\\          /\\__\\     \n    /::\\  \\       \\:\\  \\        /:/  /         /::|  |    \n   /:/\\ \\  \\       \\:\\  \\      /:/  /         /:|:|  |    \n  _\\:\\ \\ \\  \\      /::\\  \\    /:/  /  ___    /:/|:|  |__  \n /\\ \\:\\ \\ \\__\\    /:/\\:\\__\\  /:/__/  /\\__\\  /:/ |:| /\\__\\ \n \\:\\ \\:\\ \\/__/   /:/  \\/__/  \\:\\  \\ /:/  /  \\/__|:|/:/  / \n  \\:\\ \\:\\__\\    /:/  /        \\:\\  /:/  /       |:/:/  /  \n   \\:\\/:/  /    \\/__/          \\:\\/:/  /        |::/  /   \n    \\::/  /                     \\::/  /         /:/  /    \n     \\/__/                       \\/__/          \\/__/     \n                                                          \n'
-    var stunInfoStyle =
-      'background-color: #49b1f5; color: #fff; padding: 8px; font-size: 14px;'
-    var stunURLStyle =
-      'background-color: #ffbca2; padding: 8px; font-size: 14px;'
-    var stunNameStyle = 'background-color: #eaf8ff;'
-
-    console.log(
-      '%c%s%c%s%c%s',
-      stunInfoStyle,
-      stunInfo,
-      stunURLStyle,
-      stunURL,
-      stunNameStyle,
-      stunNameStr
-    )
-  },
   /**
    * Change the event code to keyCode.
    * @param {String} code Event code
@@ -532,6 +511,14 @@ Stun.utils = Stun.$u = {
 
           content += `<div class="custom-lang">${lang}</div>`
         } else if (type === 'carbon') {
+            var CODEBLOCK_CLASS_NAME = 'highlight'
+            var lang = $(this)
+            .attr('class')
+            .split(/\s/)
+            .filter(function (e) {
+              return e !== CODEBLOCK_CLASS_NAME
+            })
+          
           content += `
             <div class="custom-carbon">
               <div class="custom-carbon-dot custom-carbon-dot--red"></div>
@@ -539,6 +526,7 @@ Stun.utils = Stun.$u = {
               <div class="custom-carbon-dot custom-carbon-dot--green"></div>
             </div>
           `
+          content += `<div class="custom-lang">${lang}</div>`
         }
 
         $(`<figcaption class="custom">${content}</figcaption>`).insertBefore(

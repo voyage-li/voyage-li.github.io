@@ -2118,7 +2118,7 @@ kbd {
 }
 .highlight figcaption.custom .custom-lang {
   float: left;
-  margin: 0 0.6rem;
+  margin: 3px 10px 0px 10px;
   color: var(--color-gray-550);
 }
 .highlight figcaption.custom .custom-carbon {
@@ -2174,7 +2174,7 @@ kbd {
   background-color: inherit;
 }
 .highlight td.code {
-  padding: 0.5rem 0.75rem;
+  padding: 5px 15px 10px 15px;
 }
 .highlight .marked {
   background-color: var(--color-gray-260);
