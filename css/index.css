@@ -2646,6 +2646,18 @@ html.nightmode {
 #valine-container a {
   color: var(--color-gray-700);
 }
+#valine-container .vnum.at,
+#valine-container .vbtn.at,
+#valine-container .vctrl.at,
+#valine-container .vinput.at,
+#valine-container .vcount.at,
+#valine-container .vemoji-btn.at,
+#valine-container .vpreview-btn.at,
+#valine-container .vcontent *.at,
+#valine-container .vpreview *.at,
+#valine-container a.at {
+  color: #0793d9;
+}
 #valine-container .vinput {
   border-bottom: 1px dashed var(--color-gray-300);
 }
