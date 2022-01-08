@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="renderer" content="webkit">
+    <title>Love</title>
+
+    <!--Baidu Tongji-->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+
+
+    <style>
+        body {
+            background-color: RGB(236, 236, 234);
+            font-family: Helvetica Neue, Helvetica, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+            font-size: 1.25rem;
+            line-height: 1.5;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .header {
+            margin-top: 2em;
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+        }
+
+        .header .blog-title .logo {
+            color: #fd637d;
+            font-size: 2em;
+            font-family: "Comic Sans MS", cursive, LiSu, sans-serif;
+            text-decoration: none;
+        }
+
+        .header .menu {
+            margin: 0;
+            padding: 0;
+            color: #fd637d;
+        }
+
+        .header .menu .menu-item {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .header .menu .menu-item-link {
+            color: #fd637d;
+            text-decoration: none;
+        }
+
+        .header .menu .menu-item-link:hover {
+            color: #368ccb;
+        }
+
+        .date {
+            margin: 1em auto;
+            padding: 60px 50px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 30px;
+            color: #fd637d;
+        }
+
+        .timer {
+            font-size: 30px;
+            line-height: 1.5;
+            margin: 1em 0;
+        }
+
+        .timer b {
+            color: #fd637d;
+        }
+    </style>
+
+    <meta name="generator" content="Hexo 6.0.0">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="blog-title">
+                <a href="/" class="logo">Love</a>
+            </div>
+            <nav class="navbar">
+                <ul class="menu">
+
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            <section class="date">
+                <div class="date">
+                    <h2>
+                        李远航 & 黄思琪 在一起已经
+                    </h2>
+                    <div class="timer">
+                        <b id="d"></b> 天 <b id="h"></b> 小时 <b id="m"></b> 分钟 <b id="s"></b> 秒
+                    </div>
+                    <div class="song">
+                        <!--页面底部歌词-->
+                        <!-- require APlayer -->
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+                        <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+                        <!-- require MetingJS -->
+                        <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+                        <meting-js server="netease" type="song" id="22829933" fixed="true" autoplay="true" order="list"
+                            loop="one"></meting-js>
+                    </div>
+                </div>
+
+                <!--计时器js-->
+                <script>
+                    function timer() {
+                        window.setTimeout("timer()", 1000);
+                        var start = new Date("2020-07-21 00:00:00");
+                        var t = new Date().getTime() - start;
+                        var h = ~~(t / 1000 / 60 / 60 % 24);
+                        if (h < 10) { h = "0" + h; }
+                        var m = ~~(t / 1000 / 60 % 60);
+                        if (m < 10) { m = "0" + m; }
+                        var s = ~~(t / 1000 % 60);
+                        if (s < 10) { s = "0" + s; }
+                        document.getElementById('d').innerHTML = ~~(t / 1000 / 60 / 60 / 24);
+                        document.getElementById('h').innerHTML = h;
+                        document.getElementById('m').innerHTML = m;
+                        document.getElementById('s').innerHTML = s;
+                    }
+                    timer();
+                </script>
+                <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/love.js"></script>
+            </section>
+        </main>
+
+
+        <script type="text/javascript" color="177, 122, 125" opacity="2" zIndex="-1" count="200"
+            src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+            </script>
+
+
+    </div>
+
+</body>
+
+</html>
