@@ -2126,8 +2126,8 @@ kbd {
   display: flex;
 }
 .highlight figcaption.custom .custom-lang {
-  float: left;
-  margin: 3px 10px 0px 10px;
+  float: right;
+  margin: 3px 10px 3px 10px;
   color: var(--color-gray-550);
 }
 .highlight figcaption.custom .custom-carbon {
