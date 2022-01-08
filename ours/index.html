@@ -111,11 +111,9 @@
             <div class="blog-title">
                 <a href="/ours" class="logo">Love</a>
             </div>
-            <nav class="navbar">
-                <ul class="menu">
-
-                </ul>
-            </nav>
+            <div class="blog-return">
+                <a href="/" class="return">返回</a>
+            </div>
         </header>
 
         <main class="main">
@@ -134,8 +132,19 @@
                         <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
                         <!-- require MetingJS -->
                         <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
-                        <meting-js server="netease" type="song" id="22829933" fixed="true" autoplay="true" order="list"
-                            loop="one"></meting-js>
+                        <meting-js 
+                            server="netease" 
+                            type="song" 
+                            id="22829933"
+                            fixed="true"
+	                        autoplay="true"
+	                        loop="all"
+	                        order="random"
+	                        preload="auto"
+	                        list-folded="ture"
+	                        lrc-type="1"
+	                        mutex="true">
+                        </meting-js>
                     </div>
                 </div>
 
@@ -143,7 +152,7 @@
                 <script>
                     function timer() {
                         window.setTimeout("timer()", 1000);
-                        var start = new Date("2020-07-21 00:00:00");
+                        var start = new Date("2020-07-21 13:13:00");
                         var t = new Date().getTime() - start;
                         var h = ~~(t / 1000 / 60 / 60 % 24);
                         if (h < 10) { h = "0" + h; }
