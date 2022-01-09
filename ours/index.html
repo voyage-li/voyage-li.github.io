@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,12 +24,14 @@
             font-size: 1.25rem;
             line-height: 1.5;
             margin: 0;
-            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            align-items: center;
         }
 
         .container {
-            max-width: 960px;
-            margin: 0 auto;
+            margin: 0 200px 0 200px;
         }
 
         .header {
@@ -40,41 +43,20 @@
 
         .header .blog-title .logo {
             color: #fd637d;
-            margin-left: 20px;
             font-size: 2em;
             font-family: "Comic Sans MS", cursive, LiSu, sans-serif;
             text-decoration: none;
         }
+
         .header .blog-return .return {
             color: #fd637d;
-            margin-right: 20px;
             font-size: 20px;
+            font-family: "Comic Sans MS", cursive, LiSu, sans-serif;
             text-decoration: none;
-        }
-
-        .header .menu {
-            margin: 0;
-            padding: 0;
-            color: #fd637d;
-        }
-
-        .header .menu .menu-item {
-            display: inline-block;
-            margin-right: 10px;
-        }
-
-        .header .menu .menu-item-link {
-            color: #fd637d;
-            text-decoration: none;
-        }
-
-        .header .menu .menu-item-link:hover {
-            color: #368ccb;
         }
 
         .date {
-            margin: 1em auto;
-            padding: 60px 50px;
+            padding: 60px 50px 10px 50px;
             text-align: center;
         }
 
@@ -92,110 +74,242 @@
         .timer b {
             color: #fd637d;
         }
-        img{
-            width:50px;
-            height:50px;
-            margin-top:-5%;
+
+        img {
+            width: 50px;
+            height: 50px;
+            margin-top: -5%;
             opacity: 0.5;
             position: absolute;
             z-index: 99;
         }
+
+        .wrap {
+            width: 1000px;
+            position: relative;
+            top: 100px;
+        }
+
+        .wrap::after {
+            content: '';
+            position: absolute;
+            top: -100px;
+            left: 50%;
+            width: 5px;
+            z-index: -999;
+            height: 1000px;
+            background-color: rgba(255, 255, 255, .5);
+        }
+
+        .box {
+            position: relative;
+            width: 100%;
+            height: 120px;
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .left,
+        .right {
+            position: relative;
+            width: 40%;
+            height: 120px;
+            border-radius: 15px;
+            text-align: center;
+            color: rgb(90, 90, 90);
+            text-align: center;
+            align-items: center;
+        }
+
+        .box:nth-child(even) .left {
+            background-color: rgba(255, 255, 255, .4);
+            box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+        }
+
+        .box:nth-child(odd) .right {
+            background-color: rgba(255, 255, 255, .4);
+            box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+        }
+
+        .center {
+            width: 15%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .center>span {
+            width: 200px;
+            border-radius: 10px;
+            text-align: center;
+            font: 900 24px '';
+            line-height: 50px;
+            background-color: #fff;
+        }
     </style>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script>
-        $(function() {
-            $.fn.Cherry_Blossoms=function (params) {
-                return this.each(function () {
-                    //设置默认值
-                    var defaults={
-                        ele:'.cherry',//切换对象
-                        is_Cherry:true,//是否生成樱花
-                        image_min:10,//花瓣最小宽度和高度
-                        image_max:50,//花瓣最大宽度和高度
-                        time_min:5000,//花瓣最快下坠时间
-                        time_max:10000,//花瓣最慢下坠时间
-                        interval:100//花瓣生成时间间隔
-                    };
-                    //定义默认参数，其中若在html页面设置了param是，这里的params会替换defaults
-                    var par = $.extend({}, defaults, params);
-                    /**
-                     * [m,n]随机数函数
-                     */
-                    function randomNum(minNum, maxNum) {
-                        switch (arguments.length) {
-                            case 1:
-                                return parseInt(Math.random() * minNum + 1, 10);
-                                break;
-                            case 2:
-                                return parseInt(Math.random() * (maxNum - minNum + 1) + minNum, 10);
-                                break;
-                            default:
-                                return 0;
-                                break;
-                        }
-                    }
-                
-                    /**
-                     * 生成樱花花瓣
-                     */
-                    if(par.is_Cherry) {
-                        setInterval(function () {
-                            var time;//下落的持续时间，取随机数
-                            var image_size;//花瓣大小取随机数
-                            var margin_left;//花瓣所在位置，取随机数
-                            margin_left = randomNum(5, 100);
-                            time = randomNum(par.time_min, par.time_max);
-                            console.log(time);
-                            image_size = randomNum(par.image_min, par.image_max);
-                            console.log(image_size);
-                            $('#sakura:last-child').after('<img id="sakura" src="/image/sakura.png" alt="">');
-                            $('#sakura:last-child').css({
-                                'margin-left': margin_left + '%',
-                                'width': image_size + 'px',
-                                'height': image_size + 'px'
-                            });
-                            $('#sakura:last-child').animate({
-                                    left: -15 + '%',
-                                    top: 100 + '%',
-                                    deg: -540
-                                },
-                                {
-                                    step: function (deg) {
-                                        //console.log(deg);
-                                        $(this).css({"transform": "rotate3d(1,.2,0," + deg + "deg)"});
-                                    },
-                                    duration: time
-                                }, time);
-                            setTimeout(function () {
-                                $('#sakura:first-child').remove();
-                            }, time);
-                        }, par.interval);
-                    }
-                })
+        var stop, staticx;
+        var img = new Image();
+        img.src = "/ours/image/sakura.png"
+
+        function Sakura(x, y, s, r, fn) {
+            this.x = x;
+            this.y = y;
+            this.s = s;
+            this.r = r;
+            this.fn = fn;
+        }
+        Sakura.prototype.draw = function (cxt) {
+            cxt.save();
+            var xc = 40 * this.s / 4;
+            cxt.translate(this.x, this.y);
+            cxt.rotate(this.r);
+            cxt.drawImage(img, 0, 0, 40 * this.s, 40 * this.s)
+            cxt.restore();
+        }
+        Sakura.prototype.update = function () {
+            this.x = this.fn.x(this.x, this.y);
+            this.y = this.fn.y(this.y, this.y);
+            this.r = this.fn.r(this.r);
+            if (this.x > window.innerWidth || this.x < 0 || this.y > window.innerHeight || this.y < 0) {
+                this.r = getRandom('fnr');
+                if (Math.random() > 0.4) {
+                    this.x = getRandom('x');
+                    this.y = 0;
+                    this.s = getRandom('s');
+                    this.r = getRandom('r');
+                } else {
+                    this.x = window.innerWidth;
+                    this.y = getRandom('y');
+                    this.s = getRandom('s');
+                    this.r = getRandom('r');
+                }
             }
-        });
+        }
+        SakuraList = function () {
+            this.list = [];
+        }
+        SakuraList.prototype.push = function (sakura) {
+            this.list.push(sakura);
+        }
+        SakuraList.prototype.update = function () {
+            for (var i = 0, len = this.list.length; i < len; i++) {
+                this.list[i].update();
+            }
+        }
+        SakuraList.prototype.draw = function (cxt) {
+            for (var i = 0, len = this.list.length; i < len; i++) {
+                this.list[i].draw(cxt);
+            }
+        }
+        SakuraList.prototype.get = function (i) {
+            return this.list[i];
+        }
+        SakuraList.prototype.size = function () {
+            return this.list.length;
+        }
+
+        function getRandom(option) {
+            var ret, random;
+            switch (option) {
+                case 'x':
+                    ret = Math.random() * window.innerWidth;
+                    break;
+                case 'y':
+                    ret = Math.random() * window.innerHeight;
+                    break;
+                case 's':
+                    ret = Math.random();
+                    break;
+                case 'r':
+                    ret = Math.random() * 6;
+                    break;
+                case 'fnx':
+                    random = -0.5 + Math.random() * 1;
+                    ret = function (x, y) {
+                        return x + 0.5 * random - 1.7;
+                    };
+                    break;
+                case 'fny':
+                    random = 1.5 + Math.random() * 0.7
+                    ret = function (x, y) {
+                        return y + random;
+                    };
+                    break;
+                case 'fnr':
+                    random = Math.random() * 0.03;
+                    ret = function (r) {
+                        return r + random;
+                    };
+                    break;
+            }
+            return ret;
+        }
+
+        function startSakura() {
+            requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || window.oRequestAnimationFrame;
+            var canvas = document.createElement('canvas'),
+                cxt;
+            staticx = true;
+            canvas.height = window.innerHeight;
+            canvas.width = window.innerWidth;
+            canvas.setAttribute('style', 'position: fixed;left: 0;top: 0;pointer-events: none;');
+            canvas.setAttribute('id', 'canvas_sakura');
+            document.getElementsByTagName('body')[0].appendChild(canvas);
+            cxt = canvas.getContext('2d');
+            var sakuraList = new SakuraList();
+            for (var i = 0; i < 50; i++) {
+                var sakura, randomX, randomY, randomS, randomR, randomFnx, randomFny;
+                randomX = getRandom('x');
+                randomY = getRandom('y');
+                randomR = getRandom('r');
+                randomS = getRandom('s');
+                randomFnx = getRandom('fnx');
+                randomFny = getRandom('fny');
+                randomFnR = getRandom('fnr');
+                sakura = new Sakura(randomX, randomY, randomS, randomR, {
+                    x: randomFnx,
+                    y: randomFny,
+                    r: randomFnR
+                });
+                sakura.draw(cxt);
+                sakuraList.push(sakura);
+            }
+            stop = requestAnimationFrame(function () {
+                cxt.clearRect(0, 0, canvas.width, canvas.height);
+                sakuraList.update();
+                sakuraList.draw(cxt);
+                stop = requestAnimationFrame(arguments.callee);
+            })
+        }
+        window.onresize = function () {
+            var canvasSnow = document.getElementById('canvas_snow');
+        }
+        img.onload = function () {
+            startSakura();
+        }
+
+        function stopp() {
+            if (staticx) {
+                var child = document.getElementById("canvas_sakura");
+                child.parentNode.removeChild(child);
+                window.cancelAnimationFrame(stop);
+                staticx = false;
+            } else {
+                startSakura();
+            }
+        }
+
 
     </script>
 
-    <meta name="generator" content="Hexo 6.0.0">
 </head>
 
 <body>
-    <div class="cherry">
-    <img id="sakura" src="/image/sakura.png" alt="" >
-    </div>
-    <script>
-        $(function(){
-            $('.cherry').Cherry_Blossoms({
-                is_Cherry:true,//是否生成樱花
-                image_min:17,//花瓣最小宽度和高度
-                image_max:67,//花瓣最大宽度和高度
-                time_min:10000,//花瓣最快下坠时间
-                time_max:20000,//花瓣最慢下坠时间
-                interval:500//花瓣生成时间间隔
-            })
-        })
-    </script>
+
 
     <div class="container">
         <header class="header">
@@ -203,7 +317,7 @@
                 <a href="/ours" class="logo">Love</a>
             </div>
             <div class="blog-return">
-                <a href="/" class="return">返回    </a>
+                <a href="/" class="return">返回 </a>
             </div>
         </header>
 
@@ -211,7 +325,7 @@
             <section class="date">
                 <div class="date">
                     <h2>
-                        李远航 & 黄思琪 在一起已经
+                        李远航 & 黄思琪 在一起
                     </h2>
                     <div class="timer">
                         <b id="d"></b> 天 <b id="h"></b> 小时 <b id="m"></b> 分钟 <b id="s"></b> 秒
@@ -223,18 +337,8 @@
                         <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
                         <!-- require MetingJS -->
                         <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
-                        <meting-js 
-                            server="netease" 
-                            type="song" 
-                            id="22829933"
-                            fixed="true"
-	                        loop="all"
-	                        order="random"
-	                        preload="auto"
-                            autoplay="true"
-	                        list-folded="ture"
-	                        lrc-type="1"
-	                        mutex="true">
+                        <meting-js server="netease" type="song" id="22829933" fixed="true" loop="all" order="random"
+                            preload="auto" autoplay="true" list-folded="ture" lrc-type="1" mutex="true">
                         </meting-js>
                     </div>
                 </div>
@@ -263,13 +367,57 @@
         </main>
 
 
-        <script type="text/javascript" color="177, 122, 125" opacity="2" zIndex="-1" count="0"
+        <!-- <script type="text/javascript" color="177, 122, 125" opacity="2" zIndex="-1" count="150"
             src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
-            </script>
+            </script> -->
 
 
     </div>
+    <div class="wrap">
+        <div class="box">
+            <div class="left"></div>
+            <div class="center"><span>
+                    date
+                </span></div>
+            <div class="right">
+            </div>
+        </div>
 
+        <div class="box">
+            <div class="left">
+            </div>
+            <div class="center"><span>
+                    date
+                </span></div>
+            <div class="right"></div>
+        </div>
+
+        <div class="box">
+            <div class="left"></div>
+            <div class="center"><span>
+                    date
+                </span></div>
+            <div class="right">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="left">
+            </div>
+            <div class="center"><span>
+                    date
+                </span></div>
+            <div class="right"></div>
+        </div>
+
+        <div class="box">
+            <div class="left"></div>
+            <div class="center"><span>
+                    2020-07-21
+                </span></div>
+            <div class="right"> </div>
+        </div>
+    </div>
 </body>
 
 </html>
