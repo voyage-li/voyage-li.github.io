@@ -78,11 +78,11 @@
     <category term="C++" scheme="https://voyage-li.github.io/categories/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/C/"/>
     
     
-    <category term="GUI" scheme="https://voyage-li.github.io/tags/GUI/"/>
+    <category term="DFS" scheme="https://voyage-li.github.io/tags/DFS/"/>
     
     <category term="Qt" scheme="https://voyage-li.github.io/tags/Qt/"/>
     
-    <category term="DFS" scheme="https://voyage-li.github.io/tags/DFS/"/>
+    <category term="GUI" scheme="https://voyage-li.github.io/tags/GUI/"/>
     
   </entry>
   
@@ -143,11 +143,11 @@
     <category term="C++" scheme="https://voyage-li.github.io/categories/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/C/"/>
     
     
-    <category term="正则表达式" scheme="https://voyage-li.github.io/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    <category term="Qt" scheme="https://voyage-li.github.io/tags/Qt/"/>
     
     <category term="GUI" scheme="https://voyage-li.github.io/tags/GUI/"/>
     
-    <category term="Qt" scheme="https://voyage-li.github.io/tags/Qt/"/>
+    <category term="正则表达式" scheme="https://voyage-li.github.io/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     
   </entry>
   
