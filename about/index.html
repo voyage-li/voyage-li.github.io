@@ -23,7 +23,7 @@ var CONFIG = {
   zoomImage: {"gapAside":"20px"},
   galleryWaterfall: undefined,
   lazyload: true,
-  pjax: {"avoidBanner":false},
+  pjax: {"avoidBanner":true},
   externalLink: undefined,
   shortcuts: undefined,
   prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
@@ -305,7 +305,7 @@ if (Array.isArray(assistSearchList)) {
     }, false);
   });
 }</script><script src="https://cdn.jsdelivr.net/npm/pjax@latest/pjax.min.js"></script><script>window.addEventListener('DOMContentLoaded', function () {
-  var pjax = new Pjax({"selectors":["head title","#main",".pjax-reload",".header-inner"],"history":true,"scrollTo":0,"scrollRestoration":false,"cacheBust":false,"debug":false,"currentUrlFullReload":true,"timeout":0});
+  var pjax = new Pjax({"selectors":["head title","#main",".pjax-reload",".header-inner"],"history":true,"scrollTo":0,"scrollRestoration":true,"cacheBust":false,"debug":false,"currentUrlFullReload":true,"timeout":0});
   // 加载进度条的计时器
   var loadingTimer = null;
 
@@ -315,7 +315,7 @@ if (Array.isArray(assistSearchList)) {
     if (CONFIG.pjax && CONFIG.pjax.avoidBanner) {
       $('html').velocity('scroll', {
         duration: 500,
-        offset: $('#header').height(),
+        offset: 0,
         easing: 'easeInOutCubic'
       });
     }

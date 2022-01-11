@@ -1155,10 +1155,25 @@ kbd {
 .sidebar-toc {
   overflow: auto;
   position: relative;
-  max-height: 70vh;
+  max-height: 50vh;
   white-space: normal;
   word-wrap: break-word;
   word-break: break-word;
+}
+.sidebar-toc::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background: transparent;
+}
+.sidebar-toc::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 4px;
+}
+.sidebar-toc:hover::-webkit-scrollbar-thumb {
+  background: rgba(135,135,135,0.4);
+}
+.sidebar-toc:hover::-webkit-scrollbar-track {
+  background: rgba(135,135,135,0.1);
 }
 .sidebar-toc .toc-child {
   display: none;
@@ -1429,7 +1444,7 @@ kbd {
   color: var(--color-gray-950);
 }
 .sidebar-reading {
-  overflow: hidden;
+  overflow: auto;
   margin-top: 0.5em;
   text-align: center;
 }
