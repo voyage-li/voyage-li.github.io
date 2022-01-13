@@ -728,6 +728,21 @@ kbd {
   overflow: auto;
   margin-bottom: 1rem;
 }
+.table-container::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background: transparent;
+}
+.table-container::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 4px;
+}
+.table-container:hover::-webkit-scrollbar-thumb {
+  background: rgba(135,135,135,0.4);
+}
+.table-container:hover::-webkit-scrollbar-track {
+  background: rgba(135,135,135,0.1);
+}
 .header-inner {
   width: 100%;
   font-size: 18px;
