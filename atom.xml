@@ -50,6 +50,31 @@
   </entry>
   
   <entry>
+    <title>fish shell使用心得</title>
+    <link href="https://voyage-li.github.io/2022/01/25/fish-shell/"/>
+    <id>https://voyage-li.github.io/2022/01/25/fish-shell/</id>
+    <published>2022-01-24T16:00:00.000Z</published>
+    <updated>2022-01-24T17:42:29.295Z</updated>
+    
+    <content type="html"><![CDATA[<p>阴差阳错的，就用上了fish，然后就不想换别的了，但是fish不兼容很多的bash脚本，与网上主流教程有一些区别，在这里记录我使用fish踩的坑<br />        <img   class="lazyload lazyload-gif"          src="/images/loading.svg" data-src="https://s2.loli.net/2022/01/25/y59mJL4gXH3EhkC.png"  alt="fish.png" />      </p><span id="more"></span>        <h3 id="一-fish-shell简介"   >          <a href="#一-fish-shell简介" class="heading-link"><i class="fas fa-link"></i></a><a class="markdownIt-Anchor" href="#一-fish-shell简介"></a> 一、fish shell简介</h3>      <ul><li>全名: <a href="https://fishshell.com/">the friendly interactive shell</a></li><li>ubuntu下安装(其它同理)  <figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install fish</span><br></pre></td></tr></table></div></figure></li></ul>        <h3 id="二-基本配置"   >          <a href="#二-基本配置" class="heading-link"><i class="fas fa-link"></i></a><a class="markdownIt-Anchor" href="#二-基本配置"></a> 二、基本配置</h3>              <h4 id="1-颜色主题"   >          <a href="#1-颜色主题" class="heading-link"><i class="fas fa-link"></i></a><a class="markdownIt-Anchor" href="#1-颜色主题"></a> 1. 颜色主题</h4>      <figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fish_config</span><br></pre></td></tr></table></div></figure><p>    进入网页端设置界面，设置自己喜欢的颜色主题<br />    我的配置: <a href="https://github.com/voyage-li/my_study/blob/master/Missing-Semester/fish_prompt.fish">fish_prompt.fish</a></p>        <h4 id="2-欢迎页面"   >          <a href="#2-欢迎页面" class="heading-link"><i class="fas fa-link"></i></a><a class="markdownIt-Anchor" href="#2-欢迎页面"></a> 2. 欢迎页面</h4>      <figure class="highlight sh"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ~/.config/fish/functions/fish_greeting.fish</span></span><br><span class="line"><span class="keyword">function</span> fish_greeting</span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;欢迎文本&quot;</span></span><br><span class="line">    <span class="comment"># 可选项:</span></span><br><span class="line">    <span class="comment"># date （当前时间信息）</span></span><br><span class="line">    <span class="comment"># neofetch (显示运行状态，需要安装 neofetch ，换成 screenfetch 同理)</span></span><br><span class="line">end</span><br></pre></td></tr></table></div></figure><hr /><p><mark>太晚了睡觉了，有时间再写</mark></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;阴差阳错的，就用上了fish，然后就不想换别的了，但是fish不兼容很多的bash脚本，与网上主流教程有一些区别，在这里记录我使用fish踩的坑&lt;br /&gt;
+
+        &lt;img   class=&quot;lazyload lazyload-gif&quot;
+          src=&quot;/images/loading.svg&quot; data-src=&quot;https://s2.loli.net/2022/01/25/y59mJL4gXH3EhkC.png&quot;  alt=&quot;fish.png&quot; /&gt;
+      &lt;/p&gt;</summary>
+    
+    
+    
+    <category term="shell" scheme="https://voyage-li.github.io/categories/shell/"/>
+    
+    
+    <category term="fish" scheme="https://voyage-li.github.io/tags/fish/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Dijkstra实现导航软件</title>
     <link href="https://voyage-li.github.io/2022/01/03/navigation/"/>
     <id>https://voyage-li.github.io/2022/01/03/navigation/</id>
