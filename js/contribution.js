@@ -196,14 +196,14 @@ let github_canlendar = (git_user, git_color) => {
         if (x === 0) {
             let i = parseInt(x / 2);
             return color[0]
-        } else if (x < 2) {
+        } else if (x < 5) {
             return color[1]
+        } else if (x < 10) {
+            return color[2]
         } else if (x < 20) {
-            let i = parseInt(x / 2);
-            return color[i]
-        } else {
-            return color[9]
-        }
+            return color[3]
+        } else
+            return color[4]
     };
     let tooltip_html = (x, y, span1, span2) => {
         let html = '';
@@ -216,7 +216,7 @@ let github_canlendar = (git_user, git_color) => {
     };
     let github_info_box = (user, color) => {
         let html = '';
-        html += '<div id="git_tooltip_container"></div><div class="contrib-footer clearfix mt-1 mx-3 px-3 pb-1"><div class="float-left text-gray">数据来源 <a href="https://github.com/' + user + '" target="blank">@' + user + '</a></div><div class="contrib-legend text-gray">Less <ul class="legend"><li style="background-color:' + color[0] + '"></li><li style="background-color:' + color[2] + '"></li><li style="background-color:' + color[4] + '"></li><li style="background-color:' + color[6] + '"></li><li style="background-color:' + color[8] + '"></li></ul>More </div></div>';
+        html += '<div id="git_tooltip_container"></div><div class="contrib-footer clearfix mt-1 mx-3 px-3 pb-1"><div class="float-left text-gray">数据来源 <a href="https://github.com/' + user + '" target="blank">@' + user + '</a></div><div class="contrib-legend text-gray">Less <ul class="legend"><li style="background-color:' + color[0] + '"></li><li style="background-color:' + color[1] + '"></li><li style="background-color:' + color[2] + '"></li><li style="background-color:' + color[3] + '"></li><li style="background-color:' + color[4] + '"></li></ul>More </div></div>';
         return html
     };
     let github_main_box = (monthchange, git_data, user, color, total, thisweekdatacore, weekdatacore, oneyearbeforeday, thisday, aweekago, amonthago) => {

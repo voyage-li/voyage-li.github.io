@@ -219,13 +219,13 @@ Output :&lt;br /&gt;
     
     
     
-    <category term="游戏" scheme="https://voyage-li.github.io/categories/%E6%B8%B8%E6%88%8F/"/>
-    
     <category term="程序设计" scheme="https://voyage-li.github.io/categories/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"/>
     
-    <category term="扫雷" scheme="https://voyage-li.github.io/categories/%E6%B8%B8%E6%88%8F/%E6%89%AB%E9%9B%B7/"/>
+    <category term="游戏" scheme="https://voyage-li.github.io/categories/%E6%B8%B8%E6%88%8F/"/>
     
     <category term="C++" scheme="https://voyage-li.github.io/categories/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/C/"/>
+    
+    <category term="扫雷" scheme="https://voyage-li.github.io/categories/%E6%B8%B8%E6%88%8F/%E6%89%AB%E9%9B%B7/"/>
     
     
     <category term="GUI" scheme="https://voyage-li.github.io/tags/GUI/"/>
