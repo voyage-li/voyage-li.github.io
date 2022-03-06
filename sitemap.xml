@@ -144,7 +144,14 @@
   </url>
   
   <url>
-    <loc>https://voyage-li.github.io/tags/wsl2/</loc>
+    <loc>https://voyage-li.github.io/tags/hexo/</loc>
+    <lastmod>2022-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://voyage-li.github.io/tags/npm/</loc>
     <lastmod>2022-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -159,20 +166,6 @@
   
   <url>
     <loc>https://voyage-li.github.io/tags/anaconda/</loc>
-    <lastmod>2022-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://voyage-li.github.io/tags/hexo/</loc>
-    <lastmod>2022-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://voyage-li.github.io/tags/npm/</loc>
     <lastmod>2022-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -201,6 +194,13 @@
   
   <url>
     <loc>https://voyage-li.github.io/tags/Qt/</loc>
+    <lastmod>2022-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://voyage-li.github.io/tags/wsl2/</loc>
     <lastmod>2022-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -244,14 +244,14 @@
   </url>
   
   <url>
-    <loc>https://voyage-li.github.io/categories/%E6%B8%B8%E6%88%8F/minecraft/</loc>
+    <loc>https://voyage-li.github.io/categories/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</loc>
     <lastmod>2022-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://voyage-li.github.io/categories/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</loc>
+    <loc>https://voyage-li.github.io/categories/%E6%B8%B8%E6%88%8F/minecraft/</loc>
     <lastmod>2022-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
