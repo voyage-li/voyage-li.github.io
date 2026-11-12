@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="dark">
+  <meta name="color-scheme" content="light">
   <title>voyage-li</title>
   <style>
     :root {
-      color-scheme: dark;
+      color-scheme: light;
     }
 
     * {
@@ -26,28 +26,35 @@
       min-height: 100vh;
       min-height: 100svh;
       margin: 0;
-      background: radial-gradient(circle at 50% 45%, #161b22 0%, #0d1117 62%);
-      background-color: #0d1117;
+      background: radial-gradient(circle at 50% 45%, #ffffff 0%, #f6f8fa 62%);
+      background-color: #f6f8fa;
     }
 
     .avatar {
+      display: block;
       position: relative;
       width: min(60vmin, 320px);
       aspect-ratio: 1;
       border-radius: 50%;
       animation: avatar-spin 30s linear infinite;
       will-change: transform;
+      text-decoration: none;
       box-shadow:
-        0 24px 60px rgba(1, 4, 9, 0.65),
-        0 0 48px rgba(88, 166, 255, 0.12);
+        0 12px 32px rgba(31, 35, 40, 0.15),
+        0 0 48px rgba(9, 105, 218, 0.08);
+    }
+
+    .avatar:focus-visible {
+      outline: 2px solid #0969da;
+      outline-offset: 6px;
     }
 
     .avatar::before {
       content: "";
       position: absolute;
       inset: -5px;
-      border: 1px solid rgba(240, 246, 252, 0.12);
-      border-top-color: rgba(88, 166, 255, 0.7);
+      border: 1px solid rgba(31, 35, 40, 0.12);
+      border-top-color: #0969da;
       border-radius: 50%;
       pointer-events: none;
     }
@@ -77,7 +84,7 @@
   </style>
 </head>
 <body>
-  <div class="avatar">
+  <a class="avatar" href="https://github.com/voyage-li" target="_blank" rel="noopener noreferrer" aria-label="访问 voyage-li 的 GitHub 主页">
     <img
       src="https://github.com/voyage-li.png?size=460"
       alt="voyage-li 的 GitHub 头像"
@@ -85,6 +92,6 @@
       height="460"
       decoding="async"
     >
-  </div>
+  </a>
 </body>
 </html>
